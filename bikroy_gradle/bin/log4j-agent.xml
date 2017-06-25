@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- | log4j-agent.xml | | For more configuration infromation and examples 
+	see the Jakarta Log4j | website: http://jakarta.apache.org/log4j -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="NullAppender" class="org.apache.log4j.varia.NullAppender">
+	</appender>
+
+	<appender name="AUTO_EXEC_LOG" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${user.dir}/logs/AUTO_EXEC_LOG.log" />
+		<param name="Append" value="false" />
+		<param name="MaxFileSize" value="25MB" />
+		<param name="MaxBackupIndex" value="20" />
+		<param name="Threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p 
+				[%t][%c] %m%n"/> -->
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="INFO" />
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- The default pattern: Date Priority [Category] Message\n -->
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- ============================== -->
+	<!-- Categories to append deployment trace messages to the console -->
+	<!-- ============================== -->
+
+	<root>
+		<priority value="TRACE" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="AUTO_EXEC_LOG" />
+	</root>
+
+</log4j:configuration>

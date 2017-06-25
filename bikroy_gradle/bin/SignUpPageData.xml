@@ -1,0 +1,18 @@
+<testdata>
+	<testdataset name="signUpWithRandomUser" category="suwru_1.0" testenv="production|bikroy">
+		<userName>testUser{RANDOM}</userName>
+		<emailId>{RANDOMNUM}qaEmail@bikroy.com</emailId>
+		<password>3551194</password>
+		<diffPassword>3551194{RANDOMNUM}</diffPassword>
+	</testdataset>
+</testdata>
+
+
+
+
+
+
+
+
+
+

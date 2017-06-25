@@ -1,0 +1,48 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+
+    // Use 'jcenter' for resolving your dependencies.
+    
+}
+
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+	// http://mvnrepository.com/artifact/dom4j/dom4j
+
+	// http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.0'
+
+	// http://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+	// http://mvnrepository.com/artifact/org.uncommons/reportng
+	compile group: 'org.uncommons', name: 'reportng', version: '1.1.4'
+
+   	// The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.21'
+	
+	// http://mvnrepository.com/artifact/log4j/log4j
+	compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+	// http://mvnrepository.com/artifact/org.testng/testng
+	compile group: 'org.testng', name: 'testng', version: '6.9.10'	
+}
+
+test {
+    // enable TestNG support (default is JUnit)
+    useTestNG()  {
+        
+        if (project.ext.properties.containsKey("bikroy")) {
+            suites 'src/test/resources/testng/' + project.ext.bikroy + '.xml'
+            systemProperty 'bikroy', project.property("bikroy")    
+        } 
+    }
+}

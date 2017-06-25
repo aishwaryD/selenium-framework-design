@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="5" verbose="1" name="BikroyTestPack"
+	annotations="JDK">
+	
+	<test name="ValidateFlowForAdPostFunctionality" junit="false" preserve-order="true">
+		<classes>
+			<class name="com.bikroy.test.ValidateFlowForAdPostFunctionality">
+				<methods>
+					<include name="tc_LoginAfterSignUp"></include> 
+					<include name="tc_ValidateFlowForAdPostFunctionalityWithLogin"></include> 
+					<include name="tc_ValidateFlowForAdPostFunctionalityWithOutSignUpLogin"></include> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>   

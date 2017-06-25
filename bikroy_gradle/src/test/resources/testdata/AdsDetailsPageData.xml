@@ -1,0 +1,31 @@
+<testdata>
+
+	<testdataset name="itemDetailsToPost" category="idtp_1.0" testenv="production|bikroy">
+		<condition>New</condition>
+		<brand>Sony</brand>
+		<model>Sony Bravia KDL 55</model>
+		<title>This is a test post to sell Sony Bravia</title>
+		<description>This Post is to sell Sony Bravia With Reasonable Prices</description>
+		<price>81990</price>
+		<name>testUser{RANDOM}</name>
+		<phn>09999999999</phn>
+		<email>{RANDOMNUM}qaEmail@bikroy.com</email>	
+		<imageFile>framework_design.jpg</imageFile>	
+		<password>3551194</password>	
+	</testdataset>
+	
+	<testdataset name="setPasswordToSecureAdPost" category="sptsap_1.0" testenv="production|bikroy">
+		<password>3551194</password>
+	</testdataset>
+	
+</testdata>
+
+
+
+
+
+
+
+
+
+
