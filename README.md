@@ -1,4 +1,4 @@
-Selenium Framework Design
+Selenium Framework Design - Tool Independent Framework Design Approach
 
 == Description ==
 
