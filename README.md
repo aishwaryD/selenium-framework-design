@@ -24,7 +24,7 @@ Common practices say in general that; test scripts interact with framework compo
 
 -- Navigate to project root folder -- Enter command: gradle clean test -Pbikroy=.xml File Name -- Example-1: gradle clean test -Pbikroy=debug -- Example-2: gradle clean test -Pbikroy=ValidateFlowForAdPostFunctionality
 
-For More Information, contact me at aishwarya.at.tech@gmail.com . Happy Coding...
+For more information and the latest updates, contact me at aishwarya.at.tech@gmail.com . Happy Coding...
 
 
 @author-Aishwarya D.
